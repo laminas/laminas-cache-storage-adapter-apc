@@ -1,0 +1,3 @@
+# laminas-cache-storage-adapter-apc
+
+This component provides ...
