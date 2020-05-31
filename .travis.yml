@@ -8,6 +8,7 @@ env:
   global:
     - COMPOSER_ARGS="--no-interaction"
     - COVERAGE_DEPS="php-coveralls/php-coveralls"
+    - TESTS_LAMINAS_CACHE_APC_ENABLED=true
 
 matrix:
   fast_finish: true
