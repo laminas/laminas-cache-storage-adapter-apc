@@ -57,7 +57,8 @@ before_install:
   - pecl channel-update pecl.php.net
 
 install:
-  - echo "no\nno\nno\nno\nno\nno\n" | pecl install -f apc || return 0 ;
+  - echo "no\n" | pecl install -f apcu apcu_bc || return 0 ;
+  - phpenv config-add .ci/apcu_bc.ini ;
   - travis_retry composer install $COMPOSER_ARGS --ignore-platform-reqs
   - if [[ $DEPS == 'latest' ]]; then travis_retry composer update $COMPOSER_ARGS ; fi
   - if [[ $DEPS == 'lowest' ]]; then travis_retry composer update --prefer-lowest --prefer-stable $COMPOSER_ARGS ; fi
