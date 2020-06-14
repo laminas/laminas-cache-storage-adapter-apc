@@ -58,6 +58,9 @@ before_install:
 
 install:
   - echo "no\n" | pecl install -f apcu apcu_bc || return 0 ;
+  # prevent PECL from enabling the extension by default, see https://pear.php.net/bugs/bug.php?id=21007
+  - sed -i 's/extension="apcu.so"//' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini ;
+  - sed -i 's/extension="apc.so"//' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini ;
   - phpenv config-add .ci/apcu_bc.ini ;
   - travis_retry composer install $COMPOSER_ARGS --ignore-platform-reqs
   - if [[ $DEPS == 'latest' ]]; then travis_retry composer update $COMPOSER_ARGS ; fi
