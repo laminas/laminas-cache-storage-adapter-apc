@@ -44,6 +44,9 @@
     "config": {
         "sort-packages": true
     },
+    "suggest": {
+        "ext-apc": "APC or compatible extension, to use the APC storage adapter"
+    },
     "scripts": {
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
