@@ -1,6 +1,6 @@
 # laminas-cache-storage-adapter-apc
 
-[![Build Status](https://github.com/laminas/laminas-cache-storage-adapter-apc/workflows/Continuous%20Integration/badge.svg)](https://github.com/laminas/laminas-cache-storage-adapter-apc/actions?query=workflow%3A"Continuous+Integration")
+[![Build Status](https://github.com/laminas/laminas-cache-storage-adapter-apc/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas/laminas-cache-storage-adapter-apc/actions/workflows/continuous-integration.yml)
 
 This library provides …
 
