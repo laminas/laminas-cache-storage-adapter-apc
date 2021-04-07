@@ -1,7 +1,6 @@
 # laminas-cache-storage-adapter-apc
 
-[![Build Status](https://travis-ci.com/laminas/laminas-cache-storage-adapter-apc.svg?branch=master)](https://travis-ci.com/laminas/laminas-cache-storage-adapter-apc)
-[![Coverage Status](https://coveralls.io/repos/github/laminas/laminas-cache-storage-adapter-apc/badge.svg?branch=master)](https://coveralls.io/github/laminas/laminas-cache-storage-adapter-apc?branch=master)
+[![Build Status](https://github.com/laminas/laminas-cache-storage-adapter-apc/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas/laminas-cache-storage-adapter-apc/actions/workflows/continuous-integration.yml)
 
 This library provides …
 
