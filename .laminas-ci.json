@@ -1,0 +1,9 @@
+{
+    "extensions": [],
+    "ini": [
+        "apc.enable_cli=1"
+    ],
+    "checks": [],
+    "additional_checks": [],
+    "exclude": []
+}

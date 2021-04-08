@@ -25,10 +25,6 @@ class ApcTest extends CommonAdapterTest
 
     public function setUp()
     {
-        if (getenv('TESTS_LAMINAS_CACHE_APC_ENABLED') != 'true') {
-            $this->markTestSkipped('Enable TESTS_LAMINAS_CACHE_APC_ENABLED to run this test');
-        }
-
         try {
             new Cache\Storage\Adapter\Apc();
         } catch (Cache\Exception\ExtensionNotLoadedException $e) {
