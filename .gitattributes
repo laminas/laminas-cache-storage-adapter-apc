@@ -7,3 +7,5 @@
 /phpcs.xml export-ignore
 /phpunit.xml.dist export-ignore
 /test/ export-ignore
+/.laminas-ci/ export-ignore
+/.laminas-ci.json export-ignore
