@@ -32,7 +32,7 @@ class ApcIntegrationTest extends CachePoolTest
      */
     protected $iniUseRequestTime;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         // set non-UTC timezone
         $this->tz = date_default_timezone_get();
@@ -45,7 +45,7 @@ class ApcIntegrationTest extends CachePoolTest
         parent::setUp();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         date_default_timezone_set($this->tz);
 
@@ -59,12 +59,10 @@ class ApcIntegrationTest extends CachePoolTest
         parent::tearDown();
     }
 
-    /**
-     * @expectedException \Laminas\Cache\Psr\CacheItemPool\CacheException
-     */
     public function testApcUseRequestTimeThrowsException()
     {
         ini_set('apc.use_request_time', 1);
+        $this->expectException(\Laminas\Cache\Psr\CacheItemPool\CacheException::class);
         $this->createCachePool();
     }
 

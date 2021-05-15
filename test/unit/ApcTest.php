@@ -14,7 +14,7 @@ use Laminas\Cache;
  * @group      Laminas_Cache
  * @covers Laminas\Cache\Storage\Adapter\Apc<extended>
  */
-class ApcTest extends CommonAdapterTest
+class ApcTest extends AbstractCommonAdapterTest
 {
     /**
      * Restore 'apc.use_request_time'
@@ -23,7 +23,7 @@ class ApcTest extends CommonAdapterTest
      */
     protected $iniUseRequestTime;
 
-    public function setUp()
+    public function setUp(): void
     {
         try {
             new Cache\Storage\Adapter\Apc();
@@ -35,14 +35,14 @@ class ApcTest extends CommonAdapterTest
         $this->iniUseRequestTime = ini_get('apc.use_request_time');
         ini_set('apc.use_request_time', 0);
 
-        $this->_options = new Cache\Storage\Adapter\ApcOptions();
-        $this->_storage = new Cache\Storage\Adapter\Apc();
-        $this->_storage->setOptions($this->_options);
+        $this->options = new Cache\Storage\Adapter\ApcOptions();
+        $this->storage = new Cache\Storage\Adapter\Apc();
+        $this->storage->setOptions($this->_options);
 
         parent::setUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         if (function_exists('apc_clear_cache')) {
             apc_clear_cache('user');

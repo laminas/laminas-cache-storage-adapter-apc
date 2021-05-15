@@ -29,7 +29,7 @@ class ApcIntegrationTest extends SimpleCacheTest
      */
     protected $iniUseRequestTime;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         // set non-UTC timezone
         $this->tz = date_default_timezone_get();
@@ -42,7 +42,7 @@ class ApcIntegrationTest extends SimpleCacheTest
         parent::setUp();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         date_default_timezone_set($this->tz);
 
