@@ -15,6 +15,7 @@
   "provide": {
     "laminas/laminas-cache-storage-implementation": "1.0"
   },
+  "abandoned": "laminas/laminas-cache-storage-adapter-apcu",
   "require-dev": {
     "laminas/laminas-cache": "^2.10",
     "laminas/laminas-cache-storage-adapter-test": "^1.0@dev",
